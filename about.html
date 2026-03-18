@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodTune – Research</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #B8E0FF 0%, #F5E6FF 50%, #FFD4B8 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        nav {
+            background: #8B7FC7;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            display: flex;
+            justify-content: center;
+            gap: 0.25rem;
+            padding: 0.6rem 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 0.45rem 1.2rem;
+            border-radius: 6px;
+            transition: background 0.15s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        nav a.active {
+            background: rgba(255,255,255,0.25);
+        }
+
+        header {
+            background: #8B7FC7;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-top: 0.5rem;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .playlist {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            color: #8B7FC7;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #8B7FC7;
+            display: inline-block;
+        }
+
+        h3 {
+            color: #8B7FC7;
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: #f8f9ff;
+            border-left: 4px solid #8B7FC7;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat-card {
+            background: #8B7FC7;
+            color: white;
+            padding: 1.2rem 1rem;
+            border-radius: 5px;
+            text-align: center;
+            width: 220px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .method-card {
+            background: #f8f9ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 3px solid #8B7FC7;
+        }
+
+        .method-card h4 {
+            color: #8B7FC7;
+            margin-bottom: 0.5rem;
+        }
+
+        .method-card a {
+            color: #8B7FC7;
+        }
+
+        .card-header {
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-align: center;
+            color: #8B7FC7;
+            margin: 1rem 0;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .spotify-container {
+            width:70%;
+            margin-top: 1rem;
+        }
+
+        .spotify-container iframe {
+            width: 100%;
+            border-radius: 12px;
+            display: block;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 2rem;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="home.html">Home</a>
+            <a>About</a>
+            <a href="product.html">Product</a>
+        </nav>
+
+        <header>
+            <h1>About</h1>
+        </header>
+
+        <div class="content">
+
+            <section>
+                <h2>Background & Significance</h2>
+                <p>
+                    College students commonly experience <em>elevated stress</em> and <em>emotional fluctuation</em> due to academic pressure, financial concerns,
+                    and major life transitions. Although counseling services exist on many campuses, access is often limited by long wait times,
+                    stigma, and lack of immediate availability. As a result, students frequently rely on informal coping strategies such as <strong><em>music</em></strong>.
+                </p>
+                <div class="card-header">Research shows that music can influence <em>physiological stress responses.</em></div>
+                <div class="method-card" style="margin-bottom: 1rem;">
+                    <h4><em><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3734071/">The Effect of Music on the Human Stress Response</a></em> by Miriam Thoma Mv et al. (2013)</h4>
+                    <ul>
+                        <li>Listening to music prior to a standardized stressor predominantly affected the autonomic nervous system in terms of a faster recovery, and to a lesser degree the endocrine and psychological stress response.</li>
+                        <li>After the stressor, baseline values were reached considerably faster in the relaxing music group than in the silence group.</li>
+                        <li>Signifies that after stress, people who listened to relaxing music recovered faster than people who sat in silence.</li>
+                    </ul>
+                </div>
+                <div class="method-card">
+                    <h4><em><a href="https://pubmed.ncbi.nlm.nih.gov/26142566/">Music listening as a means of stress reduction in daily life</a></em> by Linnemann et al. (2015)</h4>
+                    <ul>
+                        <li>The most profound effects were found when relaxation was stated as the reason for music listening, with subsequent decreases in subjective stress levels and lower cortisol concentrations.</li>
+                        <li>Findings highlight music's capacity to support stress recovery at a physiological level, reinforcing its potential as a low-cost and accessible emotional regulation tool.</li>
+                    </ul>
+                </div>
+                <p style="margin-top: 2rem;">
+                    This project is intellectually compelling at the intersection of <em>mental health</em> and <em>human-computer interaction</em>, and practically significant
+                    in proposing a low-barrier, accessible tool to support emotional regulation among college students.
+                </p>
+            </section>
+
+            <section>
+                <h2>Existing Solutions & Gap Analysis</h2>
+                <ul>
+                    <img src="spotify.png" width="400px" height="250px">
+                    <li>Platforms like Spotify and Apple offer mood playlists, but they are largely algorithm-shaped</li>
+                    <li>Mental health apps track mood or use music as background, but rarely translate mood into immediate, personalized mood-based support</li>
+                    <li>Most solutions are not tailored to college students' time constraints, lacking quick, flexible interventions that fit between classes or study sessions</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Research Question</h2>
+                <div class="highlight-box">
+                    <p style="font-size: 1.1rem; margin-bottom: 0;">
+                        <strong>How do college students currently use music to regulate stress,
+                            and how might a real-time mood-based music intervention app better
+                            support their emotional regulation needs within the constraints of
+                            student life?
+                        </strong>
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Our Solution</h2>
+                <p>A mobile app for college students to manage stress and emotions.</p>
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number">30 sec</div>
+                        <div class="stat-label">Mood check-in (e.g., stressed, anxious, tired) with optional context</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5–10 min</div>
+                        <div class="stat-label">Purpose-driven music interventions (not for entertainment)</div>
+                    </div>
+                </div>
+                <ul>
+                    <li>Music tailored to emotional state (low energy for distress, slightly higher for fatigue)</li>
+                    <li>Optional post-listening feedback to personalize future recommendations</li>
+                    <li>Complementary wellness tool designed for fast, in-the-moment support</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Methods</h2>
+                <h3>Participants</h3>
+                <p>35 undergraduate students (ages 18–23) from UC Irvine.</p>
+                <h3>Study Design</h3>
+                <div class="methodology-grid">
+                    <div class="method-card">
+                        <h4>Experimental Study Design</h4>
+                        <p>Participants will take part in a music intervention and complete a survey.</p>
+                    </div>
+                    <div class="method-card">
+                        <h4>Intervention</h4>
+                        <p>10 minutes of non-stop, calming music.</p>
+                    </div>
+                    <div class="method-card">
+                        <h4>Survey</h4>
+                        <p>Self-report stress levels before and after the music intervention.</p>
+                    </div>
+                </div>
+                
+                <h3>Music Intervention</h3>
+                    <div class="spotify-container">
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3lghyqX9haGkCUXD8xfHZV?utm_source=generator" 
+                    width="100%" height="152" frameBorder="0" allowfullscreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div> 
+            </section>
+
+            <section>
+                <h2>Results</h2>
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number">[x]</div>
+                        <div class="stat-label">[Placeholder]</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">[x]</div>
+                        <div class="stat-label">[Placeholder]</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">[x]</div>
+                        <div class="stat-label">[Placeholder]</div>
+                    </div>
+                </div>
+                <h3>Key Findings</h3>
+                <ul>
+                    <li>[Placeholder]</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Discussion</h2>
+                <p>[Placeholder]</p>
+            </section>
+
+            <section>
+                <h2>Conclusion</h2>
+                <div class="highlight-box">
+                    <p>[Placeholder]</p>
+                </div>
+            </section>
+
+        </div>
+
+        <footer>
+            <p>Group 19: Irvin Alexis Castro, Aira Catig, Evelyn Arlene Garcia, Sai Kudithini</p>
+            <p style="margin-top: 0.4rem; font-size: 0.8rem;">INF 172 · UC Irvine</p>
+        </footer>
+    </div>
+</body>
+</html>

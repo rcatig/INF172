@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #B8E0FF 0%, #F5E6FF 50%, #FFD4B8 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        nav {
+            background: #8B7FC7;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            display: flex;
+            justify-content: center;
+            gap: 0.25rem;
+            padding: 0.6rem 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 0.45rem 1.2rem;
+            border-radius: 6px;
+            transition: background 0.15s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        nav a.active {
+            background: rgba(255,255,255,0.25);
+        }
+
+        header {
+            background: #8B7FC7;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-top: -2rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            color: #8B7FC7;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #8B7FC7;
+            display: inline-block;
+        }
+
+        h3 {
+            color: #8B7FC7;
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .prototype-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(139,127,199,0.25);
+        }
+
+        .prototype-wrapper iframe {
+            max-width: 100%;
+            display: block;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 2rem;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a>Product</a>
+        </nav>
+
+        <header>
+            <img src="icon.png" style="width: 80px; height: 80px;  margin-bottom: 0.5rem;">
+            <h1>MoodTune</h1>
+            <p class="tagline"><em>Your personal music intervention companion.</em></p>
+        </header>
+
+        <div class="content">
+
+            <section>
+                <h2>Interactive Prototype</h2>
+                <p>Explore our app prototype to experience MoodTune firsthand.</p>
+                <div class="prototype-wrapper">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                        src="https://embed.figma.com/proto/RygFdp5YBimDc3gPo3N8nU/INF172-Mockups?node-id=7-943&embed-host=share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+
+            <section>
+                <h2>Design Iterations</h2>
+                <p><b>First Iteration</b></p>
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/QW4tvZETxrmwPRvKR0Xlsh/INF172-Mockups?node-id=19-324&p=f&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed-host=share" 
+                allowfullscreen></iframe>
+            </section>
+            
+        <footer>
+            · Group 19 ·<br>
+            Irvin Alexis Castro, Aira Catig, Evelyn Arlene Garcia, and Sai Kudithini<br>
+            INF 172 · UC Irvine
+        </footer>
+    </div>
+</body>
+</html>
