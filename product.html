@@ -6,11 +6,7 @@
     <title>Product</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'DM Sans', sans-serif;
@@ -50,13 +46,8 @@
             transition: background 0.15s ease;
         }
 
-        nav a:hover {
-            background: rgba(255,255,255,0.2);
-        }
-
-        nav a.active {
-            background: rgba(255,255,255,0.25);
-        }
+        nav a:hover { background: rgba(255,255,255,0.2); }
+        nav a.active { background: rgba(255,255,255,0.25); }
 
         header {
             background: #8B7FC7;
@@ -79,9 +70,7 @@
             text-align: center;
         }
 
-        .content {
-            padding: 2rem;
-        }
+        .content { padding: 2rem; }
 
         section {
             margin-bottom: 2.5rem;
@@ -91,6 +80,8 @@
 
         section:last-child {
             border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
 
         h2 {
@@ -109,19 +100,9 @@
             margin-bottom: 0.8rem;
         }
 
-        p {
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
-
-        ul, ol {
-            margin-left: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
+        p { margin-bottom: 1rem; text-align: justify; }
+        ul, ol { margin-left: 2rem; margin-bottom: 1rem; }
+        li { margin-bottom: 0.5rem; }
 
         .prototype-wrapper {
             display: flex;
@@ -132,9 +113,69 @@
             box-shadow: 0 8px 30px rgba(139,127,199,0.25);
         }
 
-        .prototype-wrapper iframe {
-            max-width: 100%;
-            display: block;
+        .prototype-wrapper iframe { max-width: 100%; display: block; }
+
+
+        .wireframes-row {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+            margin-top: 1rem;
+        }
+
+        .wireframes-row img {
+            width: 18%;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(139,127,199,0.25);
+        }
+
+
+        .iter-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.25rem;
+            margin-top: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .iter-row .iter-images {
+            display: flex;
+            gap: 0.6rem;
+            flex-shrink: 0;
+        }
+
+        .iter-row.one-img .iter-images img {
+            width: 160px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(139,127,199,0.25);
+        }
+
+        .iter-row.two-img .iter-images img {
+            width: 145px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(139,127,199,0.25);
+        }
+
+        .iter-card {
+            background: #8B7FC7;
+            border-radius: 10px;
+            padding: 1.2rem 1.4rem;
+            color: white;
+            width: 260px;
+            flex-shrink: 0;
+        }
+
+        .iter-card p {
+            text-align: left;
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            line-height: 1.55;
+            color: white;
         }
 
         footer {
@@ -145,7 +186,6 @@
             font-size: 0.9rem;
         }
     </style>
-    
 </head>
 <body>
     <div class="container">
@@ -156,7 +196,7 @@
         </nav>
 
         <header>
-            <img src="icon.png" style="width: 80px; height: 80px;  margin-bottom: 0.5rem;">
+            <img src="icon.png" style="width: 80px; height: 80px; margin-bottom: 0.5rem;">
             <h1>MoodTune</h1>
             <p class="tagline"><em>Your personal music intervention companion.</em></p>
         </header>
@@ -169,18 +209,47 @@
                 <div class="prototype-wrapper">
                     <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
                         src="https://embed.figma.com/proto/RygFdp5YBimDc3gPo3N8nU/INF172-Mockups?node-id=7-943&embed-host=share"
-                        allowfullscreen>
-                    </iframe>
+                        allowfullscreen></iframe>
                 </div>
             </section>
 
             <section>
-                <h2>Design Iterations</h2>
-                <p><b>First Iteration</b></p>
-                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/QW4tvZETxrmwPRvKR0Xlsh/INF172-Mockups?node-id=19-324&p=f&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed-host=share" 
-                allowfullscreen></iframe>
+                <h2>Wireframes</h2>
+
+                <p><b>First Design Iteration</b></p>
+                <div class="wireframes-row">
+                    <img src="wireframe1.png" alt="Wireframe 1">
+                    <img src="wireframe2.png" alt="Wireframe 2">
+                    <img src="wireframe3.png" alt="Wireframe 3">
+                    <img src="wireframe4.png" alt="Wireframe 4">
+                    <img src="wireframe5.png" alt="Wireframe 5">
+                </div>
+
+                <p style="margin-top: 2rem;"><b>Second Design Iteration</b></p>
+
+                <div class="iter-row one-img">
+                    <div class="iter-images">
+                        <img src="wireframe6.png" alt="Calm option wireframe">
+                    </div>
+                    <div class="iter-card">
+                        <p>Added a <strong>calm option</strong> to the mood check-in flow, giving users a dedicated pathway for gentle, low-stimulation interventions.</p>
+                    </div>
+                </div>
+                <br><br>
+                <div class="iter-row two-img">
+                    <div class="iter-images">
+                        <img src="wireframe7.png" alt="Post-intervention wireframe">
+                        <img src="wireframe8.png" alt="History page wireframe">
+                    </div>
+                    <div class="iter-card">
+                        <p>Created a <strong>post-intervention follow-up page</strong> to capture how users felt after each session, and iterated the <strong>History page</strong> to visualise mood patterns and progress over time.</p>
+                    </div>
+                </div>
+
             </section>
-            
+
+        </div>
+
         <footer>
             · Group 19 ·<br>
             Irvin Alexis Castro, Aira Catig, Evelyn Arlene Garcia, and Sai Kudithini<br>
