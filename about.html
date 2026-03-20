@@ -93,6 +93,8 @@
 
         section:last-child {
             border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
 
         h2 {
@@ -109,6 +111,15 @@
             font-size: 1.3rem;
             margin-top: 1.5rem;
             margin-bottom: 0.8rem;
+        }
+
+        a {
+            color: #8B7FC7;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
         p {
@@ -131,6 +142,15 @@
             padding: 1.5rem;
             margin: 1.5rem 0;
             border-radius: 4px;
+        }
+
+        .highlight-box p {
+            text-align: left;
+            margin-bottom: 0.4rem;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
         }
 
         .stats {
@@ -176,6 +196,11 @@
             border-top: 3px solid #8B7FC7;
         }
 
+        .method-card p {
+            text-align: left;
+            margin-bottom: 0;
+        }
+
         .method-card h4 {
             color: #8B7FC7;
             margin-bottom: 0.5rem;
@@ -194,8 +219,9 @@
             margin-top: 2rem;
             margin-bottom: 2rem;
         }
+
         .spotify-container {
-            width:70%;
+            width: 70%;
             margin-top: 1rem;
         }
 
@@ -203,6 +229,51 @@
             width: 100%;
             border-radius: 12px;
             display: block;
+        }
+
+        .gap-row {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .gap-row img {
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+            width: 450px;
+            height: 250px;
+        }
+
+        .gap-row.img-right {
+            flex-direction: row-reverse;
+        }
+
+        .gap-card {
+            background: #8B7FC7;
+            border-radius: 10px;
+            padding: 1.2rem 1.4rem;
+            color: white;
+            max-width: 360px;
+        }
+
+        .gap-card ul {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+
+        .gap-card li {
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+
+        .gap-card .card-label {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            opacity: 0.88;
+            letter-spacing: 0.02em;
         }
 
         footer {
@@ -259,12 +330,26 @@
 
             <section>
                 <h2>Existing Solutions & Gap Analysis</h2>
-                <ul>
-                    <img src="spotify.png" width="400px" height="250px">
-                    <li>Platforms like Spotify and Apple offer mood playlists, but they are largely algorithm-shaped</li>
-                    <li>Mental health apps track mood or use music as background, but rarely translate mood into immediate, personalized mood-based support</li>
-                    <li>Most solutions are not tailored to college students' time constraints, lacking quick, flexible interventions that fit between classes or study sessions</li>
-                </ul>
+
+                <div class="gap-row">
+                    <img src="spotify.png" alt="Spotify app screenshot">
+                    <div class="gap-card">
+                        <div class="card-label"></div>
+                        <ul>
+                            <li>Platforms like Spotify and Apple offer mood playlists, but they are largely algorithm-shaped and optimized for entertainment rather than emotional regulation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="gap-row img-right">
+                    <img src="calm.png">
+                    <div class="gap-card">
+                        <div class="card-label"></div>
+                        <ul>
+                            <li>Calm and Headspace incorporate music into their wellness experiences and offer short guided sessions, but music plays a secondary role, primarily as background ambiance</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <section>
@@ -290,76 +375,121 @@
                     </div>
                     <div class="stat-card">
                         <div class="stat-number">5–10 min</div>
-                        <div class="stat-label">Purpose-driven music interventions (not for entertainment)</div>
+                        <div class="stat-label">Purpose-driven music interventions matched to the user's emotional state</div>
                     </div>
                 </div>
                 <ul>
-                    <li>Music tailored to emotional state (low energy for distress, slightly higher for fatigue)</li>
                     <li>Optional post-listening feedback to personalize future recommendations</li>
+                    <li>A session history page so users can track past interventions</li>
                     <li>Complementary wellness tool designed for fast, in-the-moment support</li>
                 </ul>
             </section>
 
             <section>
-                <h2>Methods</h2>
+                <h2>Research Methods</h2>
+                <h3><b><a href="https://docs.google.com/forms/d/e/1FAIpQLSeweaacDGQz9WrAxc2Ettf2By3aELQ6jVrc9j4LaoCjPILDfA/viewform?usp=sharing&ouid=100676596142404000091">Quantitative Survey:</a></b></h3>
                 <h3>Participants</h3>
                 <p>35 undergraduate students (ages 18–23) from UC Irvine.</p>
                 <h3>Study Design</h3>
                 <div class="methodology-grid">
                     <div class="method-card">
                         <h4>Experimental Study Design</h4>
-                        <p>Participants will take part in a music intervention and complete a survey.</p>
+                        <p>Participants will take part in a music intervention and complete a survey</p>
                     </div>
                     <div class="method-card">
-                        <h4>Intervention</h4>
-                        <p>10 minutes of non-stop, calming music.</p>
+                        <h4>Music Intervention</h4>
+                        <p>10 minutes of non-stop, calming music</p>
                     </div>
                     <div class="method-card">
                         <h4>Survey</h4>
-                        <p>Self-report stress levels before and after the music intervention.</p>
+                        <p>Self-report stress levels before and after the music intervention</p>
                     </div>
                 </div>
-                
+
                 <h3>Music Intervention</h3>
-                    <div class="spotify-container">
-                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3lghyqX9haGkCUXD8xfHZV?utm_source=generator" 
-                    width="100%" height="152" frameBorder="0" allowfullscreen="" 
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div> 
+                <div class="spotify-container">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3lghyqX9haGkCUXD8xfHZV?utm_source=generator"
+                        width="100%" height="152" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div><br><br>
+
+                <h3>Semi-Structured Interviews:</h3>
+                <h3>Participants</h3>
+                <p>Selected 12 UC Irvine undergraduate students who also participated in the quantitative survey. Participants were asked on how music relieves stress and what main features should be included in MoodTune.</p>
             </section>
 
             <section>
                 <h2>Results</h2>
+                <h3>Survey Results</h3>
                 <div class="stats">
                     <div class="stat-card">
-                        <div class="stat-number">[x]</div>
-                        <div class="stat-label">[Placeholder]</div>
+                        <div class="stat-number">77%</div>
+                        <div class="stat-label">of students self-reported decreased stress levels after listening to a relaxing music intervention</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">[x]</div>
-                        <div class="stat-label">[Placeholder]</div>
+                        <div class="stat-number">62%</div>
+                        <div class="stat-label">of students see themselves using MoodTune during their daily routine (e.g., studying, commuting)</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">[x]</div>
-                        <div class="stat-label">[Placeholder]</div>
+                        <div class="stat-number">71%</div>
+                        <div class="stat-label">of students would recommend MoodTune to another student <br><br></div>
                     </div>
+                    <img src="Change in Stress Level After Music Intervention.png" width="440" height="271">
+                </div><br>
+
+                <h3>Interview Results</h3>
+                <p>Across all 12 interviews, there were 4 common themes:</p>
+                <div class="highlight-box">
+                    <p><b>"If I'm stressed, I don't just put anything on. I look for something specific that will calm me down."</b></p>
+                    <p><b>Theme 1:</b> Music is intentional, not just random noise. Students described music as something they actively use to shift emotional states.</p>
                 </div>
-                <h3>Key Findings</h3>
-                <ul>
-                    <li>[Placeholder]</li>
-                </ul>
+                <div class="highlight-box">
+                    <p><b>"Sometimes I know I need to calm down, but I don't have the energy to figure out what to play."</b></p>
+                    <p><b>Theme 2:</b> Decision fatigue during stress. Students reported difficulty choosing music when already overwhelmed.</p>
+                </div>
+                <div class="highlight-box">
+                    <p><b>"If I'm tired but still need to study, I need something different than when I'm anxious."</b></p>
+                    <p><b>Theme 3:</b> Context matters. Students' music needs change based on the situation.</p>
+                </div>
+                <div class="highlight-box">
+                    <p><b>"It needs to be fast. Like something I can do walking to class."</b></p>
+                    <p><b>Theme 4:</b> Desire for low effort solutions. Students emphasized time constraints with minimal amount of thinking.</p>
+                </div>
             </section>
 
             <section>
                 <h2>Discussion</h2>
-                <p>[Placeholder]</p>
+                <ul>
+                    <li>A strong majority (77%) of students reported decreased stress after the music intervention, reinforcing the effectiveness of a music-based intervention to reduce stress</li>
+                    <li>5.7% of students reported an increase in stress after the intervention, suggesting the intervention is beneficial with minimal negative effects</li>
+                    <li>Not all students experienced the same level of decreased stress, indicating that context likely influences effectiveness</li>
+                    <li>The fact that 62% of students would use MoodTune in their daily routine increases the likelihood of sustained engagement</li>
+                    <li>71% of students recommend MoodTune reflects high user satisfaction of how the app meets the user's needs</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Limitations & Future Directions</h2>
+                <h3>Limitations</h3>
+                <ul>
+                    <li>Sample size constraints: All research was conducted with UCI students, limiting the generalizability of findings to other student populations or demographics.</li>
+                    <li>Self-reported outcomes: The post-survey relied on self-reported stress levels, which are subject to bias and may not accurately reflect physiological stress responses.</li>
+                    <li>Long term effects: The study does not account for long-term effects, so it is unclear whether stress reduction is sustained over time.</li>
+                </ul>
+                <h3>Future Directions</h3>
+                <ul>
+                    <li>Incorporate physiological measures (e.g., heart rate) in addition to self-reported stress levels</li>
+                    <li>Partner with campus counseling services to conduct a controlled study comparing MoodTune outcomes against control conditions</li>
+                    <li>Have participants listen to multiple music interventions over time to analyze long-term effects</li>
+                </ul>
             </section>
 
             <section>
                 <h2>Conclusion</h2>
-                <div class="highlight-box">
-                    <p>[Placeholder]</p>
-                </div>
+                <ul>
+                    <li>Overall, the survey and interviews suggest that music-based interventions are an effective way to reduce stress</li>
+                    <li>MoodTune is a practical, user-friendly solution for integrating stress relief into daily student life</li>
+                </ul>
             </section>
 
         </div>
